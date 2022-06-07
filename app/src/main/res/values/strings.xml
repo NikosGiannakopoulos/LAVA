@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">e-Learning</string>
+    <string name="subject">ΚΕΦΑΛΑΙΑ</string>
+    <string name="exam">ΕΞΕΤΑΣΕΙΣ</string>
+    <string name="score">ΒΑΘΜΟΛΟΓΙΑ</string>
+    <string name="become_a_hot_developer_mastering_java">Become a hot developer mastering Java</string>
+    <string name="lava">LAVA</string>
+    <string name="spice_up_your_java_skills">Spice up your Java skills</string>
+    <string name="highScore">HighScore</string>
+</resources>
