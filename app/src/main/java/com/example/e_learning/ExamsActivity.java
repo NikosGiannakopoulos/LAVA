@@ -132,7 +132,6 @@ public class ExamsActivity extends AppCompatActivity implements View.OnClickList
             showSolution();
             delay = 2000;
         }
-
         new Handler().postDelayed(this::showNextQuestion, delay);
     }
 
@@ -163,7 +162,6 @@ public class ExamsActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        finish();
+        startActivity(new Intent(ExamsActivity.this, MainActivity.class));
     }
 }

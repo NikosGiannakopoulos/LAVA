@@ -1,10 +1,10 @@
 package com.example.e_learning;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,11 +22,5 @@ public class MainActivity extends AppCompatActivity {
         scores.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ScoresActivity.class)));
 
         exams.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ExamsActivity.class)));
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
     }
 }
