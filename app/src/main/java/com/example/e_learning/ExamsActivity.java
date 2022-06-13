@@ -8,18 +8,20 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
 import java.util.Collections;
 import java.util.List;
 
-public class ExamsActivity extends AppCompatActivity implements View.OnClickListener {
+public class ExamsActivity extends AppCompatActivity {
 
     TextView questionCount, countdown, question;
-    AppCompatButton option1, option2, option3, option4;
+    RadioGroup radioGroup;
+    RadioButton option1, option2, option3, option4;
     List<Question> questionsList;
     int questionCounter;
     int questionCountTotal;
@@ -36,15 +38,11 @@ public class ExamsActivity extends AppCompatActivity implements View.OnClickList
         question = findViewById(R.id.question);
         countdown = findViewById(R.id.countdown);
 
+        radioGroup = findViewById(R.id.radioGroup);
         option1 = findViewById(R.id.option1);
         option2 = findViewById(R.id.option2);
         option3 = findViewById(R.id.option3);
         option4 = findViewById(R.id.option4);
-
-        option1.setOnClickListener(this);
-        option2.setOnClickListener(this);
-        option3.setOnClickListener(this);
-        option4.setOnClickListener(this);
 
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         questionsList = dbHelper.getAllQuestions();
@@ -69,38 +67,8 @@ public class ExamsActivity extends AppCompatActivity implements View.OnClickList
         countDownTimer.start();
     }
 
-    @SuppressLint("SetTextI18n")
-    private void showNextQuestion() {
-        if (questionCounter < questionCountTotal) {
-            currentQuestion = questionsList.get(questionCounter);
-
-            resetButtons();
-
-            question.setText(currentQuestion.getQuestion());
-            option1.setText(currentQuestion.getOption1());
-            option2.setText(currentQuestion.getOption2());
-            option3.setText(currentQuestion.getOption3());
-            option4.setText(currentQuestion.getOption4());
-
-            questionCounter++;
-            questionCount.setText(questionCounter + "/" + questionCountTotal);
-
-            startCountDown();
-        } else {
-            finishExam();
-        }
-    }
-
-    private void finishExam() {
-        Intent showExamResults = new Intent(ExamsActivity.this, ScoresActivity.class);
-        showExamResults.putExtra("CorrectAnswers", String.valueOf(score));
-        showExamResults.putExtra("NumberOfQuestions", String.valueOf(questionCountTotal));
-        startActivity(showExamResults);
-    }
-
     @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View view) {
+    public void onRadioButtonClicked(View view) {
         int userChoice = 0;
         switch (view.getId()) {
             case R.id.option1:
@@ -130,9 +98,15 @@ public class ExamsActivity extends AppCompatActivity implements View.OnClickList
         } else {
             view.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             showSolution();
-            delay = 2000;
+            delay = 1332;
         }
-        new Handler().postDelayed(this::showNextQuestion, delay);
+        for (int i = 0; i < radioGroup.getChildCount(); i++) {
+            (radioGroup.getChildAt(i)).setEnabled(false);
+        }
+        new Handler().postDelayed(() -> {
+            showNextQuestion();
+            resetRadioButtons();
+        }, delay);
     }
 
     @SuppressLint("SetTextI18n")
@@ -153,11 +127,44 @@ public class ExamsActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    private void resetButtons() {
+    @SuppressLint("SetTextI18n")
+    private void showNextQuestion() {
+        resetRadioButtons();
+
+        if (questionCounter < questionCountTotal) {
+            currentQuestion = questionsList.get(questionCounter);
+
+            question.setText(currentQuestion.getQuestion());
+            option1.setText(currentQuestion.getOption1());
+            option2.setText(currentQuestion.getOption2());
+            option3.setText(currentQuestion.getOption3());
+            option4.setText(currentQuestion.getOption4());
+
+            questionCounter++;
+            questionCount.setText(questionCounter + "/" + questionCountTotal);
+
+            startCountDown();
+        } else {
+            finishExam();
+        }
+    }
+
+    private void finishExam() {
+        Intent showExamResults = new Intent(ExamsActivity.this, ScoresActivity.class);
+        showExamResults.putExtra("CorrectAnswers", String.valueOf(score));
+        showExamResults.putExtra("NumberOfQuestions", String.valueOf(questionCountTotal));
+        startActivity(showExamResults);
+    }
+
+    private void resetRadioButtons() {
+        radioGroup.clearCheck();
         option1.setBackgroundTintList(ColorStateList.valueOf(Color.WHITE));
         option2.setBackgroundTintList(ColorStateList.valueOf(Color.WHITE));
         option3.setBackgroundTintList(ColorStateList.valueOf(Color.WHITE));
         option4.setBackgroundTintList(ColorStateList.valueOf(Color.WHITE));
+        for (int i = 0; i < radioGroup.getChildCount(); i++) {
+            (radioGroup.getChildAt(i)).setEnabled(true);
+        }
     }
 
     @Override
