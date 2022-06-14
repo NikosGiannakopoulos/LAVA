@@ -1,19 +1,27 @@
 package com.example.e_learning;
 
 public class Question {
-    private String question, option1, option2, option3, option4;
+
+    public static final String SUBJECT_EVERYTHING = "Everything";
+    public static final String SUBJECT_JAVA_BASICS = "Java Basics";
+    public static final String SUBJECT_JAVA_METHODS = "Java Methods";
+    public static final String SUBJECT_JAVA_CLASSES = "Java Classes";
+    public static final String SUBJECT_JAVA_FILE_HANDLING = "Java File Handling";
+
+    private String question, option1, option2, option3, option4, subject;
     private int answer;
 
     public Question() {
     }
 
-    public Question(String question, String option1, String option2, String option3, String option4, int answer) {
+    public Question(String question, String option1, String option2, String option3, String option4, int answer, String subject) {
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
         this.option4 = option4;
         this.answer = answer;
+        this.subject = subject;
     }
 
     public String getQuestion() {
@@ -62,5 +70,23 @@ public class Question {
 
     public void setAnswer(int answer) {
         this.answer = answer;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public static String[] getAllSubjects() {
+        return new String[]{
+                SUBJECT_EVERYTHING,
+                SUBJECT_JAVA_BASICS,
+                SUBJECT_JAVA_METHODS,
+                SUBJECT_JAVA_CLASSES,
+                SUBJECT_JAVA_FILE_HANDLING
+        };
     }
 }

@@ -7,4 +7,10 @@
     <string name="lava">LAVA</string>
     <string name="spice_up_your_java_skills">Spice up your Java skills</string>
     <string name="highScore">HighScore</string>
+    <string name="java_file_handling">FILE HANDLING</string>
+    <string name="java_classes">CLASSES</string>
+    <string name="java_methods">METHODS</string>
+    <string name="java_basics">BASICS</string>
+    <string name="test">Test</string>
+    <string name="start">Start</string>
 </resources>

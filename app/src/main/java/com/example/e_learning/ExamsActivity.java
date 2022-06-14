@@ -37,7 +37,6 @@ public class ExamsActivity extends AppCompatActivity {
         questionCount = findViewById(R.id.questionCount);
         question = findViewById(R.id.question);
         countdown = findViewById(R.id.countdown);
-
         radioGroup = findViewById(R.id.radioGroup);
         option1 = findViewById(R.id.option1);
         option2 = findViewById(R.id.option2);
@@ -45,7 +44,12 @@ public class ExamsActivity extends AppCompatActivity {
         option4 = findViewById(R.id.option4);
 
         DatabaseHelper dbHelper = new DatabaseHelper(this);
-        questionsList = dbHelper.getAllQuestions();
+        String pickedSubject = getIntent().getExtras().getString("PickedSubject");
+        if (pickedSubject.equals(Question.SUBJECT_EVERYTHING)) {
+            questionsList = dbHelper.getAllQuestions();
+        } else {
+            questionsList = dbHelper.getQuestions(pickedSubject);
+        }
         questionCountTotal = questionsList.size();
         Collections.shuffle(questionsList);
 
@@ -150,10 +154,9 @@ public class ExamsActivity extends AppCompatActivity {
     }
 
     private void finishExam() {
-        Intent showExamResults = new Intent(ExamsActivity.this, ScoresActivity.class);
-        showExamResults.putExtra("CorrectAnswers", String.valueOf(score));
-        showExamResults.putExtra("NumberOfQuestions", String.valueOf(questionCountTotal));
-        startActivity(showExamResults);
+        startActivity(new Intent(ExamsActivity.this, ScoresActivity.class).
+                putExtra("CorrectAnswers", String.valueOf(score)).
+                putExtra("NumberOfQuestions", String.valueOf(questionCountTotal)));
     }
 
     private void resetRadioButtons() {

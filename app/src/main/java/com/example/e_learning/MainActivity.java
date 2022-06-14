@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
         scores.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ScoresActivity.class)));
 
-        exams.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ExamsActivity.class)));
+        exams.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, StartExamActivity.class)));
     }
 }
