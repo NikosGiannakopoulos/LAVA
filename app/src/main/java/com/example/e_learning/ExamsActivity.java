@@ -28,6 +28,7 @@ public class ExamsActivity extends AppCompatActivity {
     Question currentQuestion;
     CountDownTimer countDownTimer;
     int score;
+    String pickedSubject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class ExamsActivity extends AppCompatActivity {
         option4 = findViewById(R.id.option4);
 
         DatabaseHelper dbHelper = new DatabaseHelper(this);
-        String pickedSubject = getIntent().getExtras().getString("PickedSubject");
+        pickedSubject = getIntent().getExtras().getString("PickedSubject");
         if (pickedSubject.equals(Question.SUBJECT_EVERYTHING)) {
             questionsList = dbHelper.getAllQuestions();
         } else {
@@ -156,7 +157,8 @@ public class ExamsActivity extends AppCompatActivity {
     private void finishExam() {
         startActivity(new Intent(ExamsActivity.this, ScoresActivity.class).
                 putExtra("CorrectAnswers", String.valueOf(score)).
-                putExtra("NumberOfQuestions", String.valueOf(questionCountTotal)));
+                putExtra("NumberOfQuestions", String.valueOf(questionCountTotal)).
+                putExtra("PickedSubject", pickedSubject));
     }
 
     private void resetRadioButtons() {

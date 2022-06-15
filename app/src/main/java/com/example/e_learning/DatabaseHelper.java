@@ -58,7 +58,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addQuestionToDatabase(question5);
         Question question6 = new Question("Which method can be used to find the length of a string?", "len()", "getLength()", "length()", "getSize()", 3, Question.SUBJECT_JAVA_METHODS);
         addQuestionToDatabase(question6);
-        Question question7 = new Question("To declare an array in Java, define the variable type with:", "()", "[]", "{}", "<>", 2, Question.SUBJECT_JAVA_BASICS);
+        Question question7 = new Question("To declare an array in Java, define the variable type with:", "( )", "[ ]", "{ }", "< >", 2, Question.SUBJECT_JAVA_BASICS);
         addQuestionToDatabase(question7);
         Question question8 = new Question("What is the correct way to create an object called myObj of MyClass?", "new myObj = MyClass();", "class myObj = new MyClass();", "class MyClass = new myObj();", "MyClass myObj = new MyClass();", 4, Question.SUBJECT_JAVA_CLASSES);
         addQuestionToDatabase(question8);

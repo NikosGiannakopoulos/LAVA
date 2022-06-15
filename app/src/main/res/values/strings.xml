@@ -13,4 +13,9 @@
     <string name="java_basics">BASICS</string>
     <string name="test">Test</string>
     <string name="start">Start</string>
+    <string name="final_exam">Final Exam</string>
+    <string name="basics_exam">Basics Exam</string>
+    <string name="methods_exam">Methods Exam</string>
+    <string name="classes_exam">Classes Exam</string>
+    <string name="file_handling_exam">File Handling Exam</string>
 </resources>
