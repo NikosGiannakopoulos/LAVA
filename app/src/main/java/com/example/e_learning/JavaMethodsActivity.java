@@ -1,11 +1,10 @@
 package com.example.e_learning;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class JavaMethodsActivity extends AppCompatActivity {
 
@@ -17,11 +16,6 @@ public class JavaMethodsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_java_methods);
 
         javaMethodsTest = findViewById(R.id.javaMethodsTest);
-        javaMethodsTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(JavaMethodsActivity.this, ExamsActivity.class).putExtra("PickedSubject", Question.SUBJECT_JAVA_METHODS));
-            }
-        });
+        javaMethodsTest.setOnClickListener(view -> startActivity(new Intent(JavaMethodsActivity.this, ExamsActivity.class).putExtra("PickedSubject", Question.SUBJECT_JAVA_METHODS)));
     }
 }
