@@ -1,53 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#C864FF"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/ic_saw_exam_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_saw_exam_bottom" />
+
+    <RelativeLayout
         android:id="@+id/examsLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:paddingTop="30dp"
         android:paddingBottom="30dp">
 
         <ImageView
-            android:layout_width="150dp"
+            android:id="@+id/examsImage"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_gravity="center"
             android:src="@drawable/ic_exams"
             tools:ignore="ContentDescription" />
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/examsImage"
+            android:gravity="center"
+            android:text="@string/exam"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
 
-    <LinearLayout
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/subjectSpinnerArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_below="@+id/examsLogo"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
         android:orientation="horizontal"
         android:padding="10dp">
 
         <Spinner
             android:id="@+id/subjectSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/startExamArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subjectSpinnerArea"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startExam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:layout_margin="10dp" />
-
-        <Button
-            android:id="@+id/startExam"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
+            android:background="@drawable/button_background"
             android:text="@string/start"
+            android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
-</LinearLayout>
+</RelativeLayout>

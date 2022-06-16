@@ -18,26 +18,41 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/ic_smooth_wave_bottom" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/subjectsLogo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="@string/subject"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+        android:paddingTop="30dp">
+
+        <ImageView
+            android:id="@+id/subjectsImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_subjects"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subjectsImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/subject"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/subjectsLogo"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:columnCount="2"
         android:rowCount="2">
 
@@ -67,14 +82,14 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_subject_logo_2"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_subject_logo_1"
                     tools:ignore="ContentDescription" />
 
@@ -117,14 +132,14 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_subject_logo_2"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_subject_logo_1"
                     tools:ignore="ContentDescription" />
 
@@ -167,14 +182,14 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_subject_logo_2"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_subject_logo_1"
                     tools:ignore="ContentDescription" />
 
@@ -217,14 +232,14 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_subject_logo_2"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_subject_logo_1"
                     tools:ignore="ContentDescription" />
 

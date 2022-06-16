@@ -1,16 +1,20 @@
 <resources>
     <string name="app_name">e-Learning</string>
-    <string name="subject">ΚΕΦΑΛΑΙΑ</string>
-    <string name="exam">ΕΞΕΤΑΣΕΙΣ</string>
-    <string name="score">ΒΑΘΜΟΛΟΓΙΑ</string>
+    <string name="subject">Subjects</string>
+    <string name="exam">Exams</string>
+    <string name="score">Scores</string>
     <string name="become_a_hot_developer_mastering_java">Become a hot developer mastering Java</string>
     <string name="lava">LAVA</string>
     <string name="spice_up_your_java_skills">Spice up your Java skills</string>
     <string name="highScore">HighScore</string>
-    <string name="java_file_handling">FILE HANDLING</string>
-    <string name="java_classes">CLASSES</string>
-    <string name="java_methods">METHODS</string>
-    <string name="java_basics">BASICS</string>
+    <string name="file_handling">FILE HANDLING</string>
+    <string name="classes">CLASSES</string>
+    <string name="methods">METHODS</string>
+    <string name="basics">BASICS</string>
+    <string name="java_file_handling">Java File Handling</string>
+    <string name="java_classes">Java Classes</string>
+    <string name="java_methods">Java Methods</string>
+    <string name="java_basics">Java Basics</string>
     <string name="test">Test</string>
     <string name="start">Start</string>
     <string name="final_exam">Final Exam</string>

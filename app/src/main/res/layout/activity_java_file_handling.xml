@@ -1,37 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ff3f"
     tools:context=".JavaFileHandlingActivity">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/subjectLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:id="@+id/subjectImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_subjects"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subjectImage"
+            android:gravity="center"
+            android:text="@string/java_file_handling"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subjectLogo">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/javaFileHandlingTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_background"
+                android:text="@string/test"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/javaFileHandlingTest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:text="@string/test"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+    </ScrollView>
 
-    </LinearLayout>
-
-</ScrollView>
+</RelativeLayout>
