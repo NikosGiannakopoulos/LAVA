@@ -1,25 +1,130 @@
 <resources>
     <string name="app_name">e-Learning</string>
-    <string name="subject">Subjects</string>
-    <string name="exam">Exams</string>
-    <string name="score">Scores</string>
-    <string name="become_a_hot_developer_mastering_java">Become a hot developer mastering Java</string>
-    <string name="lava">LAVA</string>
-    <string name="spice_up_your_java_skills">Spice up your Java skills</string>
-    <string name="highScore">HighScore</string>
-    <string name="file_handling">FILE HANDLING</string>
-    <string name="classes">CLASSES</string>
-    <string name="methods">METHODS</string>
-    <string name="basics">BASICS</string>
-    <string name="java_file_handling">Java File Handling</string>
-    <string name="java_classes">Java Classes</string>
-    <string name="java_methods">Java Methods</string>
-    <string name="java_basics">Java Basics</string>
-    <string name="test">Test</string>
-    <string name="start">Start</string>
-    <string name="final_exam">Final Exam</string>
     <string name="basics_exam">Basics Exam</string>
-    <string name="methods_exam">Methods Exam</string>
+    <string name="become_a_hot_developer_mastering_java">Become a hot developer mastering Java</string>
     <string name="classes_exam">Classes Exam</string>
+    <string name="exam">EXAMS</string>
     <string name="file_handling_exam">File Handling Exam</string>
+    <string name="final_exam">Final Exam</string>
+    <string name="highScore">HighScore</string>
+    <string name="lava">LAVA</string>
+    <string name="methods_exam">Methods Exam</string>
+    <string name="score">SCORES</string>
+    <string name="spice_up_your_java_skills">Spice up your Java skills</string>
+    <string name="start">Start</string>
+    <string name="subject">CHAPTERS</string>
+    <string name="test">Test</string>
+
+    <string name="java_basics">BASICS</string>
+    <string name="java_basics_comments">
+        <![CDATA[
+            <h1>Java Comments</h1>
+                <h2>Java Comments</h2>
+                    <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
+            <hr>
+                 <h2>Single-line Comments</h2>
+                    <p>Single-line comments start with two forward slashes //.</p>
+                    <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
+                    <p>This example uses a single-line comment before a line of code:</p>
+                        <h3>Example</h3>
+                            <p><em>// This is a comment<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                    <p>This example uses a single-line comment at the end of a line of code:</p>
+                        <h3>Example</h3>
+                            <p><em>System.out.println(&#34;Hello World&#34;); //This is a comment</em></p>
+            <hr>
+                <h2>Java Multi-line Comments</h2>
+                    <p>Multi-line comments start with /* and ends with */</p>
+                    <p>Any text between /* and */ will be ignored by Java.</p>
+                    <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+                        <h3>Example</h3>
+                        <p><em>/* The code below will print the words Hello World to the screen, and it is amazing */<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                            <h4>Single or multi-line comments?</h4>
+                                <p>It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.</p>
+        ]]>
+    </string>
+
+    <string name="java_classes">CLASSES</string>
+    <string name="java_classes_content">
+        <![CDATA[
+            <h1>Java Comments</h1>
+                <h2>Java Comments</h2>
+                    <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
+            <hr>
+                 <h2>Single-line Comments</h2>
+                    <p>Single-line comments start with two forward slashes //.</p>
+                    <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
+                    <p>This example uses a single-line comment before a line of code:</p>
+                        <h3>Example</h3>
+                            <p><em>// This is a comment<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                    <p>This example uses a single-line comment at the end of a line of code:</p>
+                        <h3>Example</h3>
+                            <p><em>System.out.println(&#34;Hello World&#34;); //This is a comment</em></p>
+            <hr>
+                <h2>Java Multi-line Comments</h2>
+                    <p>Multi-line comments start with /* and ends with */</p>
+                    <p>Any text between /* and */ will be ignored by Java.</p>
+                    <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+                        <h3>Example</h3>
+                        <p><em>/* The code below will print the words Hello World to the screen, and it is amazing */<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                            <h4>Single or multi-line comments?</h4>
+                                <p>It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.</p>
+        ]]>
+    </string>
+
+    <string name="java_file_handling">FILE HANDLING</string>
+    <string name="java_file_handling_content">
+        <![CDATA[
+            <h1>Java Comments</h1>
+                <h2>Java Comments</h2>
+                    <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
+            <hr>
+                 <h2>Single-line Comments</h2>
+                    <p>Single-line comments start with two forward slashes //.</p>
+                    <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
+                    <p>This example uses a single-line comment before a line of code:</p>
+                        <h3>Example</h3>
+                            <p><em>// This is a comment<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                    <p>This example uses a single-line comment at the end of a line of code:</p>
+                        <h3>Example</h3>
+                            <p><em>System.out.println(&#34;Hello World&#34;); //This is a comment</em></p>
+            <hr>
+                <h2>Java Multi-line Comments</h2>
+                    <p>Multi-line comments start with /* and ends with */</p>
+                    <p>Any text between /* and */ will be ignored by Java.</p>
+                    <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+                        <h3>Example</h3>
+                        <p><em>/* The code below will print the words Hello World to the screen, and it is amazing */<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                            <h4>Single or multi-line comments?</h4>
+                                <p>It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.</p>
+        ]]>
+    </string>
+
+    <string name="java_methods">METHODS</string>
+    <string name="java_methods_content">
+        <![CDATA[
+            <h1>Java Comments</h1>
+                <h2>Java Comments</h2>
+                    <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
+            <hr>
+                 <h2>Single-line Comments</h2>
+                    <p>Single-line comments start with two forward slashes //.</p>
+                    <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
+                    <p>This example uses a single-line comment before a line of code:</p>
+                        <h3>Example</h3>
+                            <p><em>// This is a comment<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                    <p>This example uses a single-line comment at the end of a line of code:</p>
+                        <h3>Example</h3>
+                            <p><em>System.out.println(&#34;Hello World&#34;); //This is a comment</em></p>
+            <hr>
+                <h2>Java Multi-line Comments</h2>
+                    <p>Multi-line comments start with /* and ends with */</p>
+                    <p>Any text between /* and */ will be ignored by Java.</p>
+                    <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+                        <h3>Example</h3>
+                        <p><em>/* The code below will print the words Hello World to the screen, and it is amazing */<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                            <h4>Single or multi-line comments?</h4>
+                                <p>It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.</p>
+        ]]>
+    </string>
+
 </resources>

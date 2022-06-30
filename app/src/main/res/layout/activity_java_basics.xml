@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,12 +8,11 @@
     tools:context=".JavaBasicsActivity"
     tools:ignore="ScrollViewCount">
 
-    <RelativeLayout
-        android:id="@+id/subjectLogo"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="30dp"
-        android:paddingBottom="30dp">
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/subjectImage"
@@ -24,141 +24,54 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/subjectImage"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
             android:text="@string/java_basics"
             android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold" />
 
-    </RelativeLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/subjectLogo">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="vertical">
 
-            <LinearLayout
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                android:id="@+id/expand_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
+                expandableTextView:animDuration="100"
+                expandableTextView:maxCollapsedLines="1">
 
                 <TextView
+                    android:id="@id/expandable_text"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Java Comments"
-                    android:textColor="@color/white"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="end|bottom"
+                    android:background="@android:color/transparent" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Java Comments"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code."
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Single-line Comments"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Single-line comments start with two forward slashes (//). Any text between // and the end of the line is ignored by Java (will not be executed)."
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Java Multi-line Comments"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Multi-line comments start with /* and ends with */. Any text between /* and */ will be ignored by Java."
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Java Variables"
-                    android:textColor="@color/white"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Java Variables"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Variables are containers for storing data values. In Java, there are different types of variables, for example: * String - stores text. String values are surrounded by double quotes. * int - stores integers (whole numbers), without decimals, such as 123 or -123. * float - stores floating point numbers, with decimals, such as 19.99 or -19.99. * char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes. * boolean - stores values with two states: true or false."
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Declaring (Creating) Variables"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="To create a variable, you must specify the type and assign it a value. Where type is one of Java's types (such as int or String), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable."
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/javaBasicsTest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="20dp"
-                android:background="@drawable/button_background"
-                android:text="@string/test"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
 
         </LinearLayout>
 
-    </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/javaBasicsTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background"
+            android:text="@string/test"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

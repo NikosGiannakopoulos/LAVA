@@ -171,9 +171,4 @@ public class ExamsActivity extends AppCompatActivity {
             (radioGroup.getChildAt(i)).setEnabled(true);
         }
     }
-
-    @Override
-    public void onBackPressed() {
-        startActivity(new Intent(ExamsActivity.this, MainActivity.class));
-    }
 }
