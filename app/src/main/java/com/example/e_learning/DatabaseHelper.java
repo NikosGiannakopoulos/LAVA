@@ -66,6 +66,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addQuestionToDatabase(question9);
         Question question10 = new Question("How do you start writing an if statement in Java?", "if x > y:", "if (x > y)", "if x > y then:", "IF (x > y)", 1, Question.SUBJECT_JAVA_BASICS);
         addQuestionToDatabase(question10);
+        Question question11 = new Question("Which of these class contains the methods used to write in a file?", "FileStream", "FileInputStream", "BUfferedOutputStream", "FileBufferStream", 2, Question.SUBJECT_JAVA_FILE_HANDLING);
+        addQuestionToDatabase(question11);
+        Question question12 = new Question("Which of these exception is thrown in cases when the file specified for writing is not found?", "IOException", "FileException", "FileNotFoundException", "FileInputException", 3, Question.SUBJECT_JAVA_FILE_HANDLING);
+        addQuestionToDatabase(question12);
+        Question question13 = new Question("Which of these methods are used to read in from file?", "get()", "read()", "scan()", "readFileInput()", 2, Question.SUBJECT_JAVA_FILE_HANDLING);
+        addQuestionToDatabase(question13);
+        Question question14 = new Question("Which of these methods is used to write() into a file?", "put()", "putFile()", "write()", "writeFile()", 3, Question.SUBJECT_JAVA_FILE_HANDLING);
+        addQuestionToDatabase(question14);
+        Question question15 = new Question("Which of these values is returned by read() method is end of file (EOF) is encountered?", "0", "1", "-1", "null", 3, Question.SUBJECT_JAVA_FILE_HANDLING);
+        addQuestionToDatabase(question15);
+        Question question16 = new Question("Which of these exception is thrown by close() and read() methods?", "IOException", "FileException", "FileNotFoundException", "FileInputOutputException", 1, Question.SUBJECT_JAVA_FILE_HANDLING);
+        addQuestionToDatabase(question16);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.R)

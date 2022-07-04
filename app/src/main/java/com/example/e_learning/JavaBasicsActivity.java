@@ -18,10 +18,15 @@ public class JavaBasicsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_basics);
 
-        String java_comments = Html.fromHtml(getString(R.string.java_basics_comments)).toString();
+        String java_comments = Html.fromHtml(getString(R.string.java_comments)).toString();
 
-        ExpandableTextView expandableTextView = findViewById(R.id.expand_text_view).findViewById(R.id.expand_text_view);
-        expandableTextView.setText(java_comments);
+        ExpandableTextView expandableTextViewComments = findViewById(R.id.expand_text_view_comments).findViewById(R.id.expand_text_view_comments);
+        expandableTextViewComments.setText(java_comments);
+
+        String java_variables = Html.fromHtml(getString(R.string.java_variables)).toString();
+
+        ExpandableTextView expandableTextViewVariables = findViewById(R.id.expand_text_view_variables).findViewById(R.id.expand_text_view_variables);
+        expandableTextViewVariables.setText(java_variables);
 
         javaBasicsTest = findViewById(R.id.javaBasicsTest);
         javaBasicsTest.setOnClickListener(view -> startActivity(new Intent(JavaBasicsActivity.this, ExamsActivity.class).putExtra("PickedSubject", Question.SUBJECT_JAVA_BASICS)));
