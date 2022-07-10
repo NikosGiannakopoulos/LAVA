@@ -27,6 +27,7 @@
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/drawable/ic_subjects.xml" value="0.3235" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/drawable/ic_wave.xml" value="0.3405" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/drawable/ic_wave_bottom.xml" value="0.3235" />
+        <entry key="..\:/Users/nicko/eLearning/app/src/main/res/drawable/ic_wave_subject_top.xml" value="0.3085" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/drawable/ic_wave_top.xml" value="0.3235" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/drawable/radio_button_background.xml" value="0.3195" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/drawable/radio_button_normal.xml" value="0.3235" />
@@ -37,9 +38,9 @@
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_category.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_exams.xml" value="0.25" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_java_basics.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_java_classes.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_java_file_handling.xml" value="0.33" />
-        <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_java_methods.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_java_classes.xml" value="0.11405835543766578" />
+        <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_java_file_handling.xml" value="0.1264705882352941" />
+        <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_java_methods.xml" value="0.11405835543766578" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_scores.xml" value="0.33" />
         <entry key="..\:/Users/nicko/eLearning/app/src/main/res/layout/activity_settings.xml" value="0.36666666666666664" />

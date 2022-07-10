@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff3f"
+    android:background="#00cba9"
     tools:context=".JavaFileHandlingActivity"
     tools:ignore="ScrollViewCount">
 
@@ -58,6 +58,12 @@
             </com.ms.square.android.expandabletextview.ExpandableTextView>
 
         </LinearLayout>
+
+        <VideoView
+            android:id="@+id/video_java_classes"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/javaClassesTest"
