@@ -21,10 +21,8 @@ public class JavaMethodsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_methods);
 
-        String java_methods = Html.fromHtml(getString(R.string.java_methods_chapter)).toString();
-
         ExpandableTextView expandableTextViewComments = findViewById(R.id.expand_text_view_methods).findViewById(R.id.expand_text_view_methods);
-        expandableTextViewComments.setText(java_methods);
+        expandableTextViewComments.setText(Html.fromHtml(getString(R.string.java_methods_chapter)));
 
         VideoView videoView = findViewById(R.id.video_java_methods);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.java_methods;

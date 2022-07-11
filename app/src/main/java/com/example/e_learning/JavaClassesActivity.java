@@ -21,10 +21,8 @@ public class JavaClassesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_classes);
 
-        String java_classes = Html.fromHtml(getString(R.string.java_classes_chapter)).toString();
-
         ExpandableTextView expandableTextViewComments = findViewById(R.id.expand_text_view_classes).findViewById(R.id.expand_text_view_classes);
-        expandableTextViewComments.setText(java_classes);
+        expandableTextViewComments.setText(Html.fromHtml(getString(R.string.java_classes_chapter)));
 
         VideoView videoView = findViewById(R.id.video_java_classes);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.java_classes;

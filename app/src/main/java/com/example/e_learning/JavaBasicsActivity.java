@@ -21,15 +21,11 @@ public class JavaBasicsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_basics);
 
-        String java_comments = Html.fromHtml(getString(R.string.java_comments)).toString();
-
         ExpandableTextView expandableTextViewComments = findViewById(R.id.expand_text_view_comments).findViewById(R.id.expand_text_view_comments);
-        expandableTextViewComments.setText(java_comments);
-
-        String java_variables = Html.fromHtml(getString(R.string.java_variables)).toString();
+        expandableTextViewComments.setText(Html.fromHtml(getString(R.string.java_comments)));
 
         ExpandableTextView expandableTextViewVariables = findViewById(R.id.expand_text_view_variables).findViewById(R.id.expand_text_view_variables);
-        expandableTextViewVariables.setText(java_variables);
+        expandableTextViewVariables.setText(Html.fromHtml(getString(R.string.java_variables)));
 
         VideoView videoView = findViewById(R.id.video_java_basics);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.java_basics;

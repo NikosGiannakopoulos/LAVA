@@ -21,10 +21,8 @@ public class JavaFileHandlingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_file_handling);
 
-        String java_file_handling = Html.fromHtml(getString(R.string.java_file_handling_chapter)).toString();
-
         ExpandableTextView expandableTextViewComments = findViewById(R.id.expand_text_view_file_handling).findViewById(R.id.expand_text_view_file_handling);
-        expandableTextViewComments.setText(java_file_handling);
+        expandableTextViewComments.setText(Html.fromHtml(getString(R.string.java_file_handling_chapter)));
 
         VideoView videoView = findViewById(R.id.video_java_files);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.java_files;

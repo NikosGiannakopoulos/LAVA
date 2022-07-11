@@ -2,19 +2,20 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#eeeeee"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00cba9"
-    tools:context=".JavaClassesActivity"
+    tools:context=".JavaBasicsActivity"
     tools:ignore="ScrollViewCount">
 
     <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="vertical">
 
         <ImageView
+            android:background="@drawable/ic_box"
             android:id="@+id/subjectImage"
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -22,8 +23,9 @@
             tools:ignore="ContentDescription" />
 
         <TextView
+            android:background="@drawable/ic_box"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginBottom="30dp"
             android:gravity="center"
             android:text="@string/java_file_handling"
@@ -46,7 +48,8 @@
                 <TextView
                     android:id="@id/expandable_text"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textColor="#212121" />
 
                 <ImageButton
                     android:id="@id/expand_collapse"
@@ -72,8 +75,9 @@
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:background="@drawable/button_background"
+            android:backgroundTint="#1A237E"
+            android:textColor="#1A237E"
             android:text="@string/test"
-            android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />
 

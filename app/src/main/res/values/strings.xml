@@ -19,7 +19,6 @@
     <string name="java_comments">
         <![CDATA[
             <h1>Java Comments</h1>
-                <h2>Java Comments</h2>
                     <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
             <hr>
                  <h2>Single-line Comments</h2>
@@ -27,17 +26,17 @@
                     <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
                     <p>This example uses a single-line comment before a line of code:</p>
                         <h3>Example</h3>
-                            <p><em>// This is a comment<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                            <p><em>\t//This is a comment<br>\tSystem.out.println(&#34;Hello World&#34;);</em></p>
                     <p>This example uses a single-line comment at the end of a line of code:</p>
                         <h3>Example</h3>
-                            <p><em>System.out.println(&#34;Hello World&#34;); //This is a comment</em></p>
+                            <p><em>\tSystem.out.println(&#34;Hello World&#34;); //This is a comment</em></p>
             <hr>
                 <h2>Java Multi-line Comments</h2>
                     <p>Multi-line comments start with /* and ends with */</p>
                     <p>Any text between /* and */ will be ignored by Java.</p>
                     <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
                         <h3>Example</h3>
-                        <p><em>/* The code below will print the words Hello World to the screen, and it is amazing */<br>System.out.println(&#34;Hello World&#34;);</em></p>
+                        <p><em>\t/* The code below will print the words Hello World to the screen, and it is amazing */<br>\tSystem.out.println(&#34;Hello World&#34;);</em></p>
                             <h4>Single or multi-line comments?</h4>
                                 <p>It is up to you which you want to use. Normally, we use // for short comments, and /* */ for longer.</p>
         ]]>
@@ -46,8 +45,6 @@
         <![CDATA[
             <h1>Java Variables</h1>
             <hr>
-                <h2>Java Variables</h2>
-
                     <p>Variables are containers for storing data values. </p>
                     <p>In Java, there are different <strong>types</strong> of variables, for example:</p>
                     <ul>
@@ -67,39 +64,28 @@
                     <p>To create a variable that should store text, look at the following example:</p>
                 <h3>Example</h3>
                     <p>Create a variable called <strong>name</strong> of type String and assign it the value &#34;<strong>John</strong>&#34;:</p>
-                    String name = &#34;John&#34;;
-                    System.out.println(name);
+                    <p><em>\tString name = &#34;John&#34;;<br>\tSystem.out.println(name);</em></p>
                     <p>To create a variable that should store a number, look at the following example:</p>
                 <h3>Example</h3>
                     <p>Create a variable called <strong>myNum</strong> of type int and assign it the value <strong>15</strong>:</p>
-                    int myNum = 15;
-                    System.out.println(myNum);
+                    <p><em>\tint myNum = 15;<br>\tSystem.out.println(myNum);</em></p>
                     <p>You can also declare a variable without assigning the value, and assign the value later:</p>
                 <h3>Example</h3>
-                    int myNum;
-                    myNum = 15;
-                    System.out.println(myNum);
+                    <p><em>\tint myNum;<br>\tmyNum = 15;<br>\tSystem.out.println(myNum);</em></p>
                     <p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
                 <h3>Example</h3>
                     <p>Change the value of myNum from 15 to 20:</p>
-                    int myNum = 15;
-                    myNum = 20; // myNum is now 20
-                    System.out.println(myNum);
+                    <p><em>\tint myNum = 15;<br>\tmyNum = 20; // myNum is now 20<br>\tSystem.out.println(myNum);</em></p>
             <hr>
                 <h2>Final Variables</h2>
                     <p>If you don&#8216;t want others (or yourself) to overwrite existing values, use the final keyword (this will declare the variable as &#34;final&#34; or &#34;constant&#34;, which means unchangeable and read-only):</p>
                     <h3>Example</h3>
-                    final int myNum = 15;
-                    myNum = 20; // will generate an error: cannot assign a value to a final variable
+                    <p><em>\tfinal int myNum = 15;<br>\tmyNum = 20; // will generate an error: cannot assign a value to a final variable</em></p>
             <hr>
                 <h2>Other Types</h2>
                     <p>A demonstration of how to declare variables of other types:</p>
                 <h3>Example</h3>
-                    int myNum = 5;
-                    float myFloatNum = 5.99f;
-                    char myLetter = &#8216;D&#8217;;
-                    boolean myBool = true;
-                    String myText = &#34;Hello&#34;;
+                    <p><em>\tint myNum = 5;<br>\tfloat myFloatNum = 5.99f;<br>\tchar myLetter = &#8216;D&#8217;;<br>\tboolean myBool = true;<br>\tString myText = &#34;Hello&#34;;</em></p>
         ]]>
     </string>
 
@@ -108,48 +94,26 @@
         <![CDATA[
             <h1>Java OOP</h1>
             <hr>
-                <h2>Java - What is OOP?</h2>
-                    <p>OOP stands for <strong>Object-Oriented Programming</strong>.</p>
-                    <p>Procedural programming is about writing procedures or methods that perform
-                        operations on the data, while object-oriented programming is about
-                        creating objects that contain both data and methods.</p>
-                    <p>Object-oriented programming has several advantages over procedural programming:</p>
-                    <ul>
-                        <li>OOP is faster and easier to execute</li>
-                        <li>OOP provides a clear structure for the programs</li>
-                        <li>OOP helps to keep the Java code DRY &#34;Don&#8216;t Repeat Yourself&#34;, and makes the code easier to maintain, modify and debug</li>
-                        <li>OOP makes it possible to create full reusable applications with less code and shorter development time</li>
-                    </ul>
-                    <p><strong>Tip:</strong> The &#34;Don&#8216;t Repeat Yourself&#34; (DRY) principle is about
-                    reducing the repetition of code. You should extract out the codes that are
-                    common for the application, and place them at a single place and reuse them
-                    instead of repeating it.</p>
+            <h2>Java - What is OOP?</h2>
+                <p>OOP stands for <strong>Object-Oriented Programming</strong>.</p>
+                <p>Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.</p>
+                <p>Object-oriented programming has several advantages over procedural programming:</p>
+                <ul>
+                    <li>OOP is faster and easier to execute</li>
+                    <li>OOP provides a clear structure for the programs</li>
+                    <li>OOP helps to keep the Java code DRY &#34;Don&#8216;t Repeat Yourself&#34;, and makes the code easier to maintain, modify and debug</li>
+                    <li>OOP makes it possible to create full reusable applications with less code and shorter development time</li>
+                </ul>
+                <p><strong>Tip:</strong> The &#34;Don&#8216;t Repeat Yourself&#34; (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.</p>
             <hr>
-
-                <h2>Java - What are Classes and Objects?</h2>
-                    <p>Classes and objects are the two main aspects of object-oriented programming.</p>
-                    <p>Look at the following illustration to see the difference between class and
-                    objects:</p>
-
-                <h2>class</h2>
-                    <p>Fruit</p>
-
-                <h2>objects</h2>
-                    <p>Apple</p>
-                    <p>Banana</p>
-                    <p>Mango</p>
-
-                    <p>Another example:</p>
-                        <h2>class</h2>
-                            <p>Car</p>
-                        <h2>objects</h2>
-                            <p>Volvo</p>
-                            <p>Audi</p>
-                            <p>Toyota</p>
-
-                    <p>So, a class is a template for objects, and an object is an instance of a class.</p>
-                    <p>When the individual objects are created, they inherit all the
-                    variables and methods from the class.</p>
+            <h2>Java - What are Classes and Objects?</h2>
+                <p>Classes and objects are the two main aspects of object-oriented programming.</p>
+                <p>Look at the following illustration to see the difference between class and objects:</p>
+                    <p><strong>class</strong><br>\tFruit<br><strong>objects</strong><br>\tApple<br>\tBanana<br>\tMango</p>
+                <p>Another example:</p>
+                    <p><strong>class</strong><br>\tCar<br><strong>objects</strong><br>\tVolvo<br>\tAudi<br>\tToyota</p>
+                <p>So, a class is a template for objects, and an object is an instance of a class.</p>
+                <p>When the individual objects are created, they inherit all the variables and methods from the class.</p>
         ]]>
     </string>
 
@@ -158,94 +122,84 @@
         <![CDATA[
             <h1>Java Files</h1>
             <hr>
-            <p>File handling is an important part of any application.</p>
-            <p>Java has several methods for creating, reading, updating, and
-            deleting files.</p>
+                <p>File handling is an important part of any application.</p>
+                <p>Java has several methods for creating, reading, updating, and deleting files.</p>
             <hr>
-
             <h2>Java File Handling</h2>
-            <p>File class from the java.io package, allows
-            us to work with files.</p>
-            <p>To use the File class, create an object of
-            the class, and specify the filename or directory name:
-
+                <p>File class from the java.io package, allows us to work with files.</p>
+                <p>To use the File class, create an object of the class, and specify the filename or directory name:
             <h3>Example</h3>
-            import java.io.File; // Import the File class</span>
-
-            File myObj = new File(&#34;filename.txt&#34;); // Specify the filename</span>
-           ]]>
+                <p><em>\timport java.io.File; // Import the File class<br>
+                \tFile myObj = new File(&#34;filename.txt&#34;); // Specify the filename</em></p>
+        ]]>
     </string>
+
     <string name="java_methods">METHODS</string>
     <string name="java_methods_chapter">
         <![CDATA[
             <h1>Java Methods</h1>
 
             <hr>
-            <p> A <strong>method</strong> is a block of code which only runs when it is called.</p>
-            <p>You can pass data, known as parameters, into a method.</p>
-            <p>Methods are used to perform certain actions, and they are also known as <strong>functions</strong>.</p>
-            <p>Why use methods? To reuse code: define the code once, and use
-            it many times.</p>
+
+                <p> A <strong>method</strong> is a block of code which only runs when it is called.</p>
+                <p>You can pass data, known as parameters, into a method.</p>
+                <p>Methods are used to perform certain actions, and they are also known as <strong>functions</strong>.</p>
+                <p>Why use methods? To reuse code: define the code once, and use it many times.</p>
+
             <hr>
+
             <h2>Create a Method</h2>
-            <p>A method must be declared within a class. It is defined
-            with the name of the method, followed by parentheses <strong>()</strong>. Java provides some pre-defined methods, such as System.out.println(), but you can also create your own methods to perform certain actions:</p>
+                    <p>A method must be declared within a class. It is defined with the name of the method, followed by parentheses <strong>()</strong>. Java provides some pre-defined methods, such as System.out.println(), but you can also create your own methods to perform certain actions:</p>
 
             <h3>Example</h3>
-            <p>Create a method inside Main:</p>
-            public class Main{
-              static void myMethod(){
-                // code to be executed
-                }
-              }
+                <p>Create a method inside Main:</p>
+                <p><em>\tpublic class Main {<br>
+                    \t\tstatic void myMethod() {<br>
+                        \t\t\t//code to be executed<br>
+                    \t\t}<br>
+                \t}</em></p>
 
             <h4>Example Explained</h4>
-            <ul>
-            <li>myMethod() is the name of the method</li>
-            <li>static means that the method belongs to the
-            Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.</li>
-            <li>void means that this method does not have a
-            return value. You will learn more about return values later in this chapter</li>
-            </ul>
+                <ul>
+                    <li>myMethod() is the name of the method</li>
+                    <li>static means that the method belongs to the Main\sclass and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.</li>
+                    <li>void means that this method does not have a return value. You will learn more about return values later in this chapter</li>
+                </ul>
+
             <hr>
 
             <h2>Call a Method</h2>
-            <p>To call a method in Java, write the method&#8216;s name followed by two parentheses <strong>()</strong> and a semicolon<strong>;</strong></p>
-            <p>In the following example, myMethod() is used to print a text (the action), when it is called:</p>
+                <p>To call a method in Java, write the method&#8216;s name followed by two parentheses <strong>()</strong> and a semicolon<strong>;</strong></p>
+                <p>In the following example, myMethod() is used to print a text (the action), when it is called:</p>
 
             <h3>Example</h3>
-            <p>Inside main, call the myMethod() method:</p>
-            public class Main{
-              static void myMethod(){
-                System.out.println(&#34;I just got executed!&#34;);
-              }
+                <p>Inside main, call the myMethod() method:</p>
+                <p><em>\tpublic class Main {<br>
+                    \t\tstatic void myMethod() {<br>
+                        \t\t\tSystem.out.println(&#34;I just got executed!&#34;);<br>
+                    \t\t}<br>
+                    \t\tpublic static void main(String[] args) {<br>
+                        \t\t\tmyMethod();<br>
+                    \t\t}<br>
+                \t}<br><br>
+                \t//Outputs &#34;I just got executed!&#34;</span></em></p>
 
-              public static void main(String[] args){
-                myMethod();
-                }
-            }
-
-            // Outputs &#34;I just got executed!&#34;</span>
-
-            <p>A method can also be called multiple times:</p>
+                <p>A method can also be called multiple times:</p>
 
             <h3>Example</h3>
-            public class Main{
-              static void myMethod(){
-                System.out.println(&#34;I just got executed!&#34;);
-              }
-
-              public static void main (String[] args){
-                myMethod();
-                myMethod();
-                myMethod();
-                }
-            }
-
-            // I just got executed!
-            // I just got executed!
-            // I just got executed!
+                <p><em>\tpublic class Main {<br>
+                    \t\tstatic void myMethod() {<br>
+                        \t\t\tSystem.out.println(&#34;I just got executed!&#34;);<br>
+                    \t\t}<br>
+                    \t\tpublic static void main (String[] args) {<br>
+                        \t\t\tmyMethod();<br>
+                        \t\t\tmyMethod();<br>
+                        \t\t\tmyMethod();<br>
+                    \t\t}<br>
+                \t}<br><br>
+                \t// I just got executed!<br>
+                \t// I just got executed!<br>
+                \t// I just got executed!</em><p>
         ]]>
     </string>
-
 </resources>
